@@ -1,0 +1,65 @@
+{
+  "name": "qps",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "lint": "eslint -c ./.eslintrc.cjs --ext .js,.ts,jsx,.tsx --fix",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "prettier": "prettier --write --ignore-unknown",
+    "preview": "vite preview",
+    "stylelint": "stylelint **/*.{css,less,scss} --fix"
+  },
+  "lint-staged": {
+    "./**/*": [
+      "npm run prettier"
+    ],
+    "./**/*.{css,less,scss}": [
+      "npm run stylelint"
+    ],
+    "./**/*{.js,.ts,jsx,.tsx}": [
+      "npm run lint"
+    ]
+  },
+  "dependencies": {
+    "antd": "^5.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@ebonex/eslint-config-qps": "^0.0.4",
+    "@ebonex/eslint-plugin-usestate-order": "^1.0.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "postcss-less": "^6.0.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "prettier-plugin-packagejson": "^2.4.5",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-less": "^2.0.0",
+    "stylelint-order": "^6.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
+  }
+}
